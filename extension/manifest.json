@@ -1,0 +1,35 @@
+{
+    "author": "zahir sirag",
+    "name": "TinkerCad",
+    "version": "1.5",
+    "description": "tinkercad to TCP sockets",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.tinkercad.com/things/*/editel"
+            ],
+            "js": [
+                "script/socket.io.js",
+                "script/main.js",
+                "script/element.js"
+            ],
+            "css": [
+                "res/style/style.css"
+            ]
+        }
+    ],
+    "browser_action": {
+        "default_icon": "res/icons/128.png",
+        "default_popup": "page/pop.html",
+        "default_title": "TinkerCad"
+    },
+    "icons": {
+        "16": "res/icons/16.png",
+        "48": "res/icons/48.png",
+        "128": "res/icons/128.png"
+    },
+    "default_locale": "en_US",
+    "permissions": ["storage"],
+    "short_name": "tinkercad",
+    "manifest_version": 2
+}
